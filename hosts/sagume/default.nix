@@ -22,7 +22,10 @@
     ];
   };
 
+  #JANK!
   systemd.services.NetworkManager-wait-online.enable = false;
+  systemd.network.wait-online.anyInterface = true;
+  systemd.services.systemd-udevd.restartIfChanged = false;
   
 
   programs.dconf.enable = true;

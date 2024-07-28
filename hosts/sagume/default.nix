@@ -22,7 +22,8 @@
     ];
   };
 
-  systemd.services.NetworkManager-wait-online.enable = lib.mkForce false;
+  systemd.services.NetworkManager-wait-online.enable = false;
+  
 
   programs.dconf.enable = true;
 

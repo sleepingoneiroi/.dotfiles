@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{pkgs, lib, ...}:
 {
   imports = [
     ./hardware-configuration.nix
@@ -21,6 +21,8 @@
       pkgs.xdg-desktop-portal-gtk
     ];
   };
+
+  systemd.services.NetworkManager-wait-online.enable = lib.mkForce false;
 
   programs.dconf.enable = true;
 

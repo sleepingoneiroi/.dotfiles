@@ -1,0 +1,6 @@
+{...}:
+{
+  programs.hyfetch = {
+    enable = true;
+  };
+}

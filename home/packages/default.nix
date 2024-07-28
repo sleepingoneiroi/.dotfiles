@@ -41,7 +41,7 @@
     libnotify
     hyprpicker
     wl-clipboard
-    networkmanager
+    #networkmanager
     #yazi
     
     mullvad-vpn

@@ -24,6 +24,8 @@
 
   programs.dconf.enable = true;
 
+  networking.networkmanager.enable = true;
+
   catppuccin = {
     enable = true;
     flavor = "mocha";

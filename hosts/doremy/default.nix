@@ -5,6 +5,7 @@
     ../../modules/desktop #desktop config
     #../../modules/audio.nix #enable audio support
     # inputs.catppuccin.nixosModules.catppuccin
+    
   ];
 
   boot.initrd.kernelModules = [ "amdgpu" ];
@@ -14,6 +15,7 @@
 	  enable = true;
   };
   nixpkgs.config.rocmSupport = true;
+  #services.flatpak.enable = true;
 
 
   
@@ -29,7 +31,7 @@
     xdgOpenUsePortal = true;
     extraPortals = [
       pkgs.xdg-desktop-portal-hyprland
-      pkgs.xdg-desktop-portal-gtk
+      #pkgs.xdg-desktop-portal-gtk
     ];
   };
 
@@ -43,6 +45,12 @@
     #remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
     localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
+    package = pkgs.steam.override {
+      extraPkgs = pkgs: with pkgs; [
+        libkrb5
+        keyutils
+      ];
+    };
   };
 
   # services.greetd = {

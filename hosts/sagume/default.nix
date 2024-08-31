@@ -18,12 +18,13 @@
     xdgOpenUsePortal = true;
     extraPortals = [
       pkgs.xdg-desktop-portal-hyprland
-      pkgs.xdg-desktop-portal-gtk
     ];
   };
 
   #JANK!
   systemd.services.NetworkManager-wait-online.enable = false;
+  systemd.network.wait-online.enable = false;
+  systemd.network.wait-online.timeout = 0;
   systemd.network.wait-online.anyInterface = true;
   systemd.services.systemd-udevd.restartIfChanged = false;
   

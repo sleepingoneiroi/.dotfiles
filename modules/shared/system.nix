@@ -22,4 +22,6 @@
     autoUpgrade.enable = false;
     stateVersion = "24.05";
   };
+
+  zramSwap.enable = true;
 }

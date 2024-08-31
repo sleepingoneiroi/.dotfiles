@@ -5,7 +5,7 @@
     # 0.8 is nice if we opacity
     active_opacity = 0.8;
     inactive_opacity = 0.8;
-    fullscreen_opacity = 0.8;
+    fullscreen_opacity = 1;
 
     drop_shadow = true;
     "col.shadow" = "rgb(11111B)";

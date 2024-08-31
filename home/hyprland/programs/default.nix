@@ -2,8 +2,9 @@
 {
   imports = [
     ./waybar
-    ./swaync
+    #./swaync
     #./swaylock.nix
+    ./mako.nix
     ./hyprlock.nix
   ];
 }

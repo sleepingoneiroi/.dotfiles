@@ -15,6 +15,8 @@
         "hyprctl dispatch exec mullvad-vpn"
         "hyprctl dispatch exec easyeffects --gapplication-service -l \"dt770 80ohm\""
         "hyprlock"
+        #"hyprctl dispatch exec vesktop"
+        "swww img ./wallpapers/nixos-4k.png"
       ];
     };
   };

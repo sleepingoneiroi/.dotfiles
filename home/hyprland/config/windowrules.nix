@@ -19,8 +19,9 @@
       "float, title:^(Picture-in-Picture)$"
       "float, class:^(Viewnior)$"
       "float, class:^(download)$"
+      #"opacity 1 1 1, class:^(Starsector).*$"
 
-      "workspace 6, title:^(.*(Disc|WebC)ord.*)$"
+      "workspace 4, title:^(.*(Disc|WebC)ord.*)$"
 
       # throw sharing indicators away
       "workspace special silent, title:^(Firefox — Sharing Indicator)$"

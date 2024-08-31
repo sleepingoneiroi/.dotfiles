@@ -14,9 +14,17 @@
     matugen.url = "github:InioX/matugen?ref=v2.2.0";
 
     catppuccin-vsc.url = "https://flakehub.com/f/catppuccin/vscode/*.tar.gz";
+
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    neve.url = "github:redyf/Neve";
+
   };
 
-  outputs = {self, nixpkgs, home-manager, catppuccin, nix-colors, catppuccin-vsc, ...} @inputs: {
+  outputs = {self, nixpkgs, home-manager, catppuccin, nix-colors, catppuccin-vsc, nixvim, neve, ...} @inputs: {
     nixosConfigurations = {
       doremy = nixpkgs.lib.nixosSystem{
         system = "x86_64-linux";
@@ -32,6 +40,7 @@
             home-manager = {
               useGlobalPkgs = true;
               users.oneiroi = import ./home;
+            
               extraSpecialArgs = {inherit inputs;};
             };
           }

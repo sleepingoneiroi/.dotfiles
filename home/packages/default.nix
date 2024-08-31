@@ -8,13 +8,16 @@
     ./starship.nix
     ./fuzzel.nix
 
-    #./cider
     ./vscodium.nix
     ./btop.nix
     ./hyfetch.nix
     ./yazi.nix
     ./easyeffects.nix
-    #./gpg.nix
+    ./gaming.nix
+    ./nixvim.nix
+    ./cider.nix
+
+    ./programming
   ];
 
   home.packages = with pkgs; [
@@ -29,8 +32,12 @@
     inter
     noto-fonts
     maple-mono
+    playerctl
     
     nil
+    alejandra
+    #wlogout
+
     #firefox
     floorp
     bun
@@ -54,25 +61,42 @@
     grim
     slurp
     python3
+    p7zip
+    #ungoogled-chromium
 
     #keepassxc
 
     #xivlauncher
-    starsector
     clinfo
     rocmPackages.clr.icd
     
     mpvScripts.mpris
     #passExtensions.pass-import
     #dunst
+    yt-dlp 
+    xorg.xrandr
+    read-edid 
+    lshw
 
     #easyeffects
+
+    obsidian
+    xfce.ristretto
+    libreoffice
+    bashmount
+    #mullvad-browser
+    #tor-browser
   ];
+
+  home.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+    #ELECTRON_OZONE_PLATFORM_HINT = "wayland";
+    #ELECTRON_ENABLE_FEATURES = "WaylandWindowDecorations";
+    #DEFAULT_BROWSER = "${pkgs.floorp}/bin/qutebrowser"
+  };
 
   programs.browserpass = {
     enable = true;
     browsers = ["firefox"];
-  };
-
-  
+  };  
 }

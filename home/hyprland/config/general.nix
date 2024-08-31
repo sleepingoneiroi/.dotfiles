@@ -11,4 +11,12 @@
     "col.active_border" = "$lavender";
     "col.inactive_border" = "$surface1";
   };
+
+  wayland.windowManager.hyprland.settings.xwayland = {
+    force_zero_scaling = true;
+  };
+
+  wayland.windowManager.hyprland.settings.monitor = [
+    ", highrr, auto, 1"
+  ];
 }

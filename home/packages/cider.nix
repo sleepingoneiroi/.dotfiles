@@ -5,10 +5,9 @@
 
   pname = "cider";
 
-  version = "2.4.1";
+  version = "2.5.0";
 
-  src = ./Cider.AppImage;
-  theme = ./mocha-lavender.cider-theme;
+  src = "${~/../home/oneiroi/.local/share/cider/Cider-linux-appimage-x64.AppImage}";
 
   extraInstallCommands =
     let contents = appimageTools.extract { inherit pname version src; };
@@ -17,7 +16,6 @@
       substituteInPlace $out/share/applications/${pname}.desktop \
         --replace 'Exec=AppRun' 'Exec=${pname}'
       cp -r ${contents}/usr/share/icons $out/share
-      cp  ${theme} $out/share
     '';
 
 

@@ -4,11 +4,9 @@
     #WM
     ./hyprland
 
-    #themeing
     ./themes
 
     ./packages
-
   ];
   home.username = "oneiroi";
   home.homeDirectory = "/home/oneiroi";
@@ -24,6 +22,7 @@
   
   home.stateVersion = "24.05";
   programs.home-manager.enable = true;
+  #programs.home-manager.backupFileExtension = "backup";
 
   systemd.user.targets.tray = {
       Unit = {

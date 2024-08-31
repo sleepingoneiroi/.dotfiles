@@ -11,14 +11,14 @@
     modules-left= [
         "custom/launcher" 
         "hyprland/workspaces"
+        "mpris"
     ];
     modules-center= [
         "clock"
         "hyprland/window"
-        #"mpris"
     ];
     modules-right= [
-        "tray" 
+        #"tray" 
         "cpu"
         "memory"
         "disk"
@@ -119,13 +119,13 @@
         tooltip = false;
         format = "{icon} ";
         format-icons = {
-            notification = "<span foreground='red'><sup></sup></span>   ";
+            notification = "";
             none = "";
-            dnd-notification = "<span foreground='red'><sup></sup></span>   ";
+            dnd-notification = "";
             dnd-none = "";
-            inhibited-notification = "<span foreground='red'><sup></sup></span>   ";
+            inhibited-notification = "";
             inhibited-none = "";
-            dnd-inhibited-notification = "<span foreground='red'><sup></sup></span>   ";
+            dnd-inhibited-notification = "";
             dnd-inhibited-none = "";
         };
         return-type = "json";
@@ -143,16 +143,12 @@
         max-length = 35;
     };
 
-    # mpris = {
-    #   format = "DEFAULT: {player_icon} {dynamic}";
-    #   format-paused = "DEFAULT: {status_icon} <i>{dynamic}</i>";
-    #   player-icons = {
-    #     default = "▶";
-    #     mpv = "🎵";
-    #   };
-    #   status-icons = {
-    #     paused = "⏸";
-    #   };
-    # };
+    mpris = {
+      format = "{dynamic}";
+      format-paused = "{dynamic}";
+      dynamic-order = ["title" "artist"];
+
+      player = "cider";
+    };
   };
 }

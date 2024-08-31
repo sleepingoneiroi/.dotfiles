@@ -30,7 +30,7 @@ in
 
     #workspaces {
         font-size: 18px;
-        padding-left: 15px;
+        padding-right: 15px;
         
     }
     #workspaces button {
@@ -45,7 +45,7 @@ in
         color: #b4befe;
     }
 
-    #tray, #pulseaudio, #network, #cpu, #memory, #disk, #clock, #battery, #custom-notification {
+    #tray, #pulseaudio, #network, #cpu, #memory, #disk, #clock, #battery, #custom-notification, #mpris, #window {
         font-size: ${custom.font_size};
         color: ${custom.text_color};
     }
@@ -84,12 +84,12 @@ in
     }
 
     custom-notification {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 10px;
+        padding-right: 15px;
     }
     
     #clock {
-        padding-left: 9px;
+        padding-left: 15px;
         padding-right: 15px;
     }
 
@@ -98,6 +98,11 @@ in
         color: #b4befe;
         font-weight: ${custom.font_weight};
         padding-left: 10px;
+        padding-right: 15px;
+    }
+
+    #mpris {
+        padding-left: 9px;
         padding-right: 15px;
     }
   '';

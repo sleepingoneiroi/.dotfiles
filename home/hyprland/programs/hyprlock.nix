@@ -27,7 +27,7 @@
     # BACKGROUND
     background {
       monitor =
-      path = ~/Pictures/Wallpapers/Kurzgesagy-Black_Hole_2.png
+      path = ../wallpapers/nixos-4k.png
       color = $base
       blur_passes = 0
     }

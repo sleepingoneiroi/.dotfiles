@@ -12,6 +12,7 @@ in
         "${mod}, Return, exec, kitty"
         #"${mod}, L, exec, ${defaults.screenLocker}"
         #"${mod}, O, exec, obsidian"
+        "${mod} SHIFT, Return, exec, [float] kitty"
 
         # window management
         "${mod}, Q, killactive,"
@@ -42,6 +43,8 @@ in
         
         #file explorer
         "${mod}, E, exec, kitty -e yazi"
+
+        #"${mod}, escape, exec, wlogout"
 
         #", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
         #", XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"

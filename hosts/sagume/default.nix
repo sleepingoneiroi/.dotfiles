@@ -1,4 +1,4 @@
-{pkgs, lib, ...}:
+{pkgs, ...}:
 {
   imports = [
     ./hardware-configuration.nix
@@ -9,17 +9,22 @@
 
   networking.hostName = "sagume";
 
-  programs.hyprland = {
-    enable = true;
+  hardware ={
+    cpu.intel.updateMicrocode = true;
+    enableAllFirmware = true;
   };
-  xdg.portal = {
-    enable = true;
-    wlr.enable = true;
-    xdgOpenUsePortal = true;
-    extraPortals = [
-      pkgs.xdg-desktop-portal-hyprland
-    ];
-  };
+
+  # programs.hyprland = {
+  #   enable = true;
+  # };
+  # xdg.portal = {
+  #   enable = true;
+  #   wlr.enable = true;
+  #   xdgOpenUsePortal = true;
+  #   extraPortals = [
+  #     pkgs.xdg-desktop-portal-hyprland
+  #   ];
+  # };
 
   #JANK!
   systemd.services.NetworkManager-wait-online.enable = false;
@@ -28,7 +33,6 @@
   systemd.network.wait-online.anyInterface = true;
   systemd.services.systemd-udevd.restartIfChanged = false;
   
-
   programs.dconf.enable = true;
 
   networking.networkmanager.enable = true;
@@ -37,6 +41,11 @@
     enable = true;
     flavor = "mocha";
     accent = "lavender";
+  };
+
+  swapDevices = {
+    device = "/var/lib/swapfile";
+    size = 16*1024;
   };
 
   programs.fish.enable = true;

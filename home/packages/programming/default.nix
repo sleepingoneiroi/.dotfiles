@@ -4,5 +4,7 @@
     #jetbrains.idea-community
     jetbrains.idea-ultimate
     temurin-bin
+    jetbrains.rider
+    #yarn
   ];
 }

@@ -44,6 +44,8 @@ in
         #file explorer
         "${mod}, E, exec, kitty -e yazi"
 
+        #passmenu 
+        #"${mod}, P, exec, kitty -e passmenu"
         #"${mod}, escape, exec, wlogout"
 
         #", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"

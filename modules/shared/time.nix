@@ -9,6 +9,7 @@
       servers = [
         "time.cloudflare.com"
       ];
+      extraConfig = "makestep 1 -1";
     };
   };
 }

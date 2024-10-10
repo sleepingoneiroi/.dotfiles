@@ -18,7 +18,7 @@
     pass-secret-service
   ];
   environment.systemPackages = with pkgs; [
-    pass
+    pass-wayland
     pass-secret-service
     libsecret
   ];

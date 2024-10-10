@@ -14,8 +14,9 @@
     ./yazi.nix
     ./easyeffects.nix
     ./gaming.nix
-    ./nixvim.nix
+    #./nixvim.nix
     ./cider.nix
+    ./floorp.nix
 
     ./programming
   ];
@@ -33,16 +34,20 @@
     noto-fonts
     maple-mono
     playerctl
+    #termusic
+    ffmpeg_7-full
+    #yt-dlp
+    #musikcube
     
     nil
     alejandra
     #wlogout
 
     #firefox
-    floorp
-    bun
+    #floorp
+    #bun
     brightnessctl
-    dart-sass
+    #dart-sass
     swww
     mpv
     libnotify
@@ -53,6 +58,8 @@
     
     mullvad-vpn
     pavucontrol
+    ark
+    #parsec-bin
 
     vesktop
     #cider
@@ -60,8 +67,13 @@
     grimblast
     grim
     slurp
-    python3
-    p7zip
+    python311
+    #parsec-bin
+    #moonlight-qt
+    python311Packages.zipfile2
+    python311Packages.requests
+    python311Packages.pip
+    #p7zip
     #ungoogled-chromium
 
     #keepassxc
@@ -85,7 +97,7 @@
     libreoffice
     bashmount
     #mullvad-browser
-    #tor-browser
+    tor-browser
   ];
 
   home.sessionVariables = {
@@ -94,7 +106,7 @@
     #ELECTRON_ENABLE_FEATURES = "WaylandWindowDecorations";
     #DEFAULT_BROWSER = "${pkgs.floorp}/bin/qutebrowser"
   };
-
+  programs.zathura.enable = true;
   programs.browserpass = {
     enable = true;
     browsers = ["firefox"];

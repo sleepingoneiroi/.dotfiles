@@ -8,50 +8,31 @@
     
   ];
 
-  boot.initrd.kernelModules = [ "amdgpu" ];
+  networking.hostName = "doremy";
+
+  hardware.cpu.amd.updateMicrocode = true;
+  boot = {
+    initrd.kernelModules = [ "amdgpu" ];
+    kernelModules = [ 
+      "kvm-amd" 
+      "amd-pstate"
+    ];
+
+  };
   services.xserver.videoDrivers = [ "modesetting" ];
   hardware.graphics = {
 	# Mesa
 	  enable = true;
-  };
-  nixpkgs.config.rocmSupport = true;
-  #services.flatpak.enable = true;
-
-
-  
-  
-  networking.hostName = "doremy";
-
-  programs.hyprland = {
-    enable = true;
-  };
-  xdg.portal = {
-    enable = true;
-    wlr.enable = true;
-    xdgOpenUsePortal = true;
-    extraPortals = [
-      pkgs.xdg-desktop-portal-hyprland
-      #pkgs.xdg-desktop-portal-gtk
+    extraPackages = with pkgs; [
+      rocm-opencl-icd
+      rocm-opencl-runtime
     ];
   };
 
-
+  nixpkgs.config.rocmSupport = true;
+  services.flatpak.enable = true;
+  
   programs.dconf.enable = true;
-
-  #gamin
-  programs.gamemode.enable = true;
-  programs.steam = {
-    enable = true;
-    #remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-    localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
-    package = pkgs.steam.override {
-      extraPkgs = pkgs: with pkgs; [
-        libkrb5
-        keyutils
-      ];
-    };
-  };
 
   # services.greetd = {
   #     enable = true;
@@ -62,25 +43,19 @@
   #     '';
   #   };
 
-  catppuccin = {
-    enable = true;
-    flavor = "mocha";
-    accent = "lavender";
-  };
-
   programs.fish.enable = true;
   users.users.oneiroi.shell = pkgs.fish;
 
   services.displayManager.sddm = {
     enable = true;
-    autoLogin.enable = true;
-    autoLogin.user = "oneiroi";
+    # autoLogin.enable = true;
+    # autoLogin.user = "oneiroi";
     package = pkgs.kdePackages.sddm;
     wayland.enable = true;
   };
 
-  # services.displayManager.autoLogin = {
-  #   enable = true;
-  #   user = "oneiroi";
-  # };
+  services.displayManager.autoLogin = {
+    enable = true;
+    user = "oneiroi";
+  };
 }

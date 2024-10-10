@@ -10,5 +10,8 @@
     #./runner.nix
     ./secrets.nix
     ./security.nix
+    ./printing.nix
+    ./theme.nix
+    ./hyprland.nix
   ];
 }

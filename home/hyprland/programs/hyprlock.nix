@@ -1,11 +1,14 @@
 {pkgs, ...}:
 {
-  home.packages = [ pkgs.hyprlock ];
+  home.packages = [ 
+    pkgs.hyprlock
+
+   ];
   xdg.configFile."hypr/hyprlock.conf".text = ''
     $red = rgb(f38ba8)
     $yellow = rgb(f9e2af)
     $lavender = rgb(b4befe)
-
+    
     $mauve = rgb(cba6f7)
     $mauveAlpha = cba6f7
 

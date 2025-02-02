@@ -1,4 +1,4 @@
-{inputs, pkgs, ...}:
+{pkgs, ...}:
 # let
 #   inherit (pkgs.stdenv.hostPlatform) system;
 #   umu = inputs.umu.packages.${system}.umu.override {

@@ -1,2 +1,3 @@
 secrets/secrets.nix
 IntelliJProjects/
+flake.lock

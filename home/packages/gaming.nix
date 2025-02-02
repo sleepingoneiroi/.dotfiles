@@ -1,4 +1,5 @@
-{pkgs, ...}:{
+{pkgs, ...}:
+{
   home.packages = with pkgs;[
     #starsector
     lutris
@@ -13,7 +14,11 @@
     protonup-qt
     prismlauncher
     glfw-wayland-minecraft
+    umu-launcher
     #jre8
     #xivlauncher
+    
   ];
+
+  
 }

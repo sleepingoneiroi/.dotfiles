@@ -16,7 +16,7 @@
         "hyprctl dispatch exec easyeffects --gapplication-service -l \"dt770 80ohm\""
         #"hyprlock"
         
-        "swww img ./wallpapers/nixos-4k.png"
+        "swww img assets/jill.png --no-resize --fill-color 181825"
         
       ];
     };

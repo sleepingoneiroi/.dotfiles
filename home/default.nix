@@ -17,6 +17,7 @@
     enable = true;
     userName  = "sleepingoneiroi";
     userEmail = "sleepingoneiroi@proton.me";
+    lfs.enable = true;
   };
   #programs.swaylock.enable = false;
   

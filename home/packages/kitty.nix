@@ -1,10 +1,10 @@
 {
   programs.kitty = {
     enable = true;
-    catppuccin = {
-      enable = true;
-      flavor = "mocha";
-    };
+    # catppuccin = {
+    #   enable = true;
+    #   flavor = "mocha";
+    # };
     settings = {
         background_opacity = "0.85";
         font_size = 13;

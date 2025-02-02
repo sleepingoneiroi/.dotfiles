@@ -1,4 +1,12 @@
-{pkgs, ...}:
+{inputs, pkgs, ...}:
+# let
+#   inherit (pkgs.stdenv.hostPlatform) system;
+#   umu = inputs.umu.packages.${system}.umu.override {
+#     version = inputs.umu.shortRev;
+#     truststore = true;
+#     cbor2 = true;
+#   };
+# in
 {
   programs.gamemode.enable = true;
   programs.steam = {
@@ -13,4 +21,5 @@
       ];
     };
   };
+  # environment.systemPackages = [umu];
 }

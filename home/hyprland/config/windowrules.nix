@@ -21,8 +21,10 @@
       "float, class:^(download)$"
       #"opacity 1 1 1, class:^(Starsector).*$"
 
-      "workspace 4, title:^(.*(Disc|WebC)ord.*)$"
-      "workspace 5, title:^(.*(c|C)ider.*)$"
+      "workspace 4 silent, title:^(.*(Disc|WebC)ord.*)$"
+      "workspace 5 silent, title:^(.*(c|C)ider.*)$"
+      "workspace 6 silent, title:^(.*(s|S)team.*)$"
+      "workspace 6 silent, title:^(.*(l|L)utris.*)$"
 
       # throw sharing indicators away
       "workspace special silent, title:^(Firefox — Sharing Indicator)$"

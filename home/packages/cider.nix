@@ -5,9 +5,9 @@
 
   pname = "Cider";
 
-  version = "2.6.0";
+  version = "2.6.1";
 
-  src = "${~/../home/oneiroi/.local/share/cider/cider-linux-x64.AppImage}";
+  src = "${../../assets/cider-v2.0.2-linux-x64.AppImage}";
 
   extraInstallCommands =
     let contents = appimageTools.extract { inherit pname version src; };

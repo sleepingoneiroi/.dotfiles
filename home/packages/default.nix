@@ -54,7 +54,7 @@
     swww
     mpv
     libnotify
-    #hyprpicker
+    hyprpicker
     wl-clipboard
     #networkmanager
     #yazi
@@ -63,6 +63,8 @@
     pavucontrol
     ark
     #parsec-bin
+
+    catppuccinifier-cli
 
     vesktop
     #cider
@@ -84,15 +86,15 @@
 
     #xivlauncher
     clinfo
-    #rocmPackages.clr.icd
+    rocmPackages.clr.icd
     
     mpvScripts.mpris
     #passExtensions.pass-import
     #dunst
     yt-dlp 
-    xorg.xrandr
-    read-edid 
-    lshw
+    #xorg.xrandr
+    #read-edid 
+    #lshw
     #superfile
 
     #easyeffects

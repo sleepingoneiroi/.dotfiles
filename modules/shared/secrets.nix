@@ -16,5 +16,5 @@
   services.passSecretService = {
     enable = true;
     package = pkgs.libsecret;
-    };
+  };
 }

@@ -42,4 +42,6 @@
 
   nixpkgs.config.allowUnfree = true;
   nixpkgs.overlays = [inputs.catppuccin-vsc.overlays.default];
+
+  documentation.man.generateCaches = false;
 }

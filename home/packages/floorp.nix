@@ -19,8 +19,4 @@
       "x-scheme-handler/unknown" = "floorp.desktop";
     };
   };
-  # home.xdg.desktopEntries.librewolf = {
-  #   name = "Floorp";
-  #   exec = "${pkgs.floorp}/bin/floorp";
-  # };
 }

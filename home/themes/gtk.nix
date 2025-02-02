@@ -23,10 +23,10 @@
     gtk = {
       enable = true;
 
-      catppuccin = {
-        enable = true;
-        icon.enable = true;
-      };
+      # catppuccin = {
+      #   enable = true;
+      #   icon.enable = true;
+      # };
 
       gtk2 = {
         configLocation = "${config.xdg.configHome}/gtk-2.0/gtkrc";

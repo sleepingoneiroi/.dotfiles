@@ -24,15 +24,28 @@ in
 
     colorScheme = nix-colors.colorSchemes.catppuccin-mocha;
     
+    # stylix = {
+    #   enable = true;
+    #   base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+    # };
 
     # pointer / cursor theming
     home.pointerCursor = {
+      package = pkgs.catppuccin-cursors.mochaLavender; 
       name = "catppuccin-mocha-lavender-cursors"; 
       size = 16;
+
       gtk.enable = true;
-      # this adds extra deps, so lets only enable it on wayland
-      x11.enable = true;
-      package = pkgs.catppuccin-cursors.mochaLavender; 
+
+      x11 = {
+        enable = true;
+        defaultCursor = "catppuccin-mocha-lavender-cursors";
+      };
+      
+      hyprcursor = {
+        enable = true;
+        size = 16;
+      };
     };
   };
 }

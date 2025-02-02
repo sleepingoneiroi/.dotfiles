@@ -1,3 +1,4 @@
+{pkgs, ...}:
 {
   networking = {
     # generate a host ID by hashing the hostname
@@ -15,13 +16,32 @@
     # dns
     # should be using mullvad anyways :)
     nameservers = [
-      "1.1.1.1"
-      "1.0.0.1"
-      "9.9.9.9"
+      "1.1.1.2"
+      "1.0.0.2"
+     # "9.9.9.9"
     ];
 
     enableIPv6 = true;
+    
+
+    firewall = {
+      allowedUDPPorts = [9994 9993];
+      # extraCommands = ''
+      #   iptables -A INPUT -i enp6s0 -s 192.168.1.0/24 -j DROP
+      # '';
+    };
   };
 
-  services.mullvad-vpn.enable = true;
+  services.mullvad-vpn = {
+    enable = true;
+    package = pkgs.mullvad-vpn;
+  };
+
+  # services.zerotierone = {
+  #   enable = true;
+  #   joinNetworks = [
+  #     "e3918db4838c338b"
+  #   ];
+  #   port = 9994;
+  # };
 }

@@ -15,6 +15,8 @@
 
     catppuccin-vsc.url = "https://flakehub.com/f/catppuccin/vscode/*.tar.gz";
 
+    #stylix.url = "github:danth/stylix";
+
     # nixvim = {
     #   url = "github:nix-community/nixvim";
     #   inputs.nixpkgs.follows = "nixpkgs";
@@ -28,23 +30,26 @@
     nixosConfigurations = {
       doremy = nixpkgs.lib.nixosSystem{
         system = "x86_64-linux";
+        #host = "doremy";
         
         specialArgs = { 
           inherit inputs;
         };
         modules = [
           ./hosts/doremy
-
+      
           home-manager.nixosModules.home-manager
           {
             home-manager = {
               useGlobalPkgs = true;
               users.oneiroi = import ./home;
+              backupFileExtension = "backup";
             
               extraSpecialArgs = {inherit inputs;};
             };
           }
           catppuccin.nixosModules.catppuccin
+          #stylix.nixosModules.stylix
         ];
       };
       sagume = nixpkgs.lib.nixosSystem{

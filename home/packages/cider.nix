@@ -3,11 +3,11 @@
   home.packages = with pkgs; [
     (pkgs.appimageTools.wrapType2 rec{
 
-  pname = "cider";
+  pname = "Cider";
 
-  version = "2.5.0";
+  version = "2.6.0";
 
-  src = "${~/../home/oneiroi/.local/share/cider/Cider-linux-appimage-x64.AppImage}";
+  src = "${~/../home/oneiroi/.local/share/cider/cider-linux-x64.AppImage}";
 
   extraInstallCommands =
     let contents = appimageTools.extract { inherit pname version src; };

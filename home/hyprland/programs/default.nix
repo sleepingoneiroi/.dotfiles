@@ -5,6 +5,6 @@
     #./swaync
     #./swaylock.nix
     ./mako.nix
-    ./hyprlock.nix
+    #./hyprlock.nix
   ];
 }

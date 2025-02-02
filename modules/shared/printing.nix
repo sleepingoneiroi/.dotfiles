@@ -3,7 +3,7 @@
   services = {
     printing = {
       enable = true;
-      drivers = [pkgs.hplip];
+      #drivers = [pkgs.hplip];
     };
     avahi = {
       enable = true;

@@ -8,6 +8,7 @@
       enableNTS = true;
       servers = [
         "time.cloudflare.com"
+        "ntp.time.nl"
       ];
       extraConfig = "makestep 1 -1";
     };

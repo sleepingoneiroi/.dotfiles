@@ -17,6 +17,7 @@
     #./nixvim.nix
     ./cider.nix
     ./floorp.nix
+    ./obs.nix
 
     ./programming
   ];
@@ -25,7 +26,9 @@
     noto-fonts-color-emoji
     material-icons
     material-design-icons
-    (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" "FiraCode"]; })
+    #(nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" "FiraCode"]; })
+    nerd-fonts.symbols-only
+    nerd-fonts.fira-code
     corefonts
     source-sans
     source-serif
@@ -35,7 +38,7 @@
     maple-mono
     playerctl
     #termusic
-    ffmpeg_7-full
+    #ffmpeg_7-full
     #yt-dlp
     #musikcube
     
@@ -51,12 +54,12 @@
     swww
     mpv
     libnotify
-    hyprpicker
+    #hyprpicker
     wl-clipboard
     #networkmanager
     #yazi
     
-    mullvad-vpn
+    #mullvad-vpn
     pavucontrol
     ark
     #parsec-bin
@@ -70,9 +73,10 @@
     python311
     #parsec-bin
     #moonlight-qt
-    python311Packages.zipfile2
-    python311Packages.requests
-    python311Packages.pip
+    # python311Packages.zipfile2
+    # python311Packages.requests
+    # python311Packages.pip
+    #audacity
     #p7zip
     #ungoogled-chromium
 
@@ -80,7 +84,7 @@
 
     #xivlauncher
     clinfo
-    rocmPackages.clr.icd
+    #rocmPackages.clr.icd
     
     mpvScripts.mpris
     #passExtensions.pass-import
@@ -89,6 +93,7 @@
     xorg.xrandr
     read-edid 
     lshw
+    #superfile
 
     #easyeffects
 
@@ -97,18 +102,20 @@
     libreoffice
     bashmount
     #mullvad-browser
-    tor-browser
+    #tor-browser
   ];
 
   home.sessionVariables = {
     NIXOS_OZONE_WL = "1";
+    #WLR_NO_HARDWARE_CURSORS = "1";
     #ELECTRON_OZONE_PLATFORM_HINT = "wayland";
     #ELECTRON_ENABLE_FEATURES = "WaylandWindowDecorations";
     #DEFAULT_BROWSER = "${pkgs.floorp}/bin/qutebrowser"
   };
-  programs.zathura.enable = true;
-  programs.browserpass = {
-    enable = true;
-    browsers = ["firefox"];
-  };  
+  
+  #programs.zathura.enable = true;
+  # programs.browserpass = {
+  #   enable = true;
+  #   browsers = ["firefox"];
+  # };  
 }

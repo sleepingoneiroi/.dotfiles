@@ -22,6 +22,7 @@
       #"opacity 1 1 1, class:^(Starsector).*$"
 
       "workspace 4, title:^(.*(Disc|WebC)ord.*)$"
+      "workspace 5, title:^(.*(c|C)ider.*)$"
 
       # throw sharing indicators away
       "workspace special silent, title:^(Firefox — Sharing Indicator)$"
